@@ -19,7 +19,7 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
+$apiInstance = new Flagr\Client\Api\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -70,7 +70,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
+$apiInstance = new Flagr\Client\Api\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -120,7 +120,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
+$apiInstance = new Flagr\Client\Api\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -169,7 +169,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
+$apiInstance = new Flagr\Client\Api\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
