@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * Flag Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,11 +64,11 @@ class Flag implements ModelInterface, ArrayAccess
 'id' => 'int',
 'key' => 'string',
 'notes' => 'string',
-'segments' => '\Swagger\Client\Model\Segment[]',
-'tags' => '\Swagger\Client\Model\Tag[]',
+'segments' => '\Flagr\Client\Model\Segment[]',
+'tags' => '\Flagr\Client\Model\Tag[]',
 'updated_at' => '\DateTime',
 'updated_by' => 'string',
-'variants' => '\Swagger\Client\Model\Variant[]'    ];
+'variants' => '\Flagr\Client\Model\Variant[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -472,7 +472,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Gets segments
      *
-     * @return \Swagger\Client\Model\Segment[]
+     * @return \Flagr\Client\Model\Segment[]
      */
     public function getSegments()
     {
@@ -482,7 +482,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Sets segments
      *
-     * @param \Swagger\Client\Model\Segment[] $segments segments
+     * @param \Flagr\Client\Model\Segment[] $segments segments
      *
      * @return $this
      */
@@ -496,7 +496,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Gets tags
      *
-     * @return \Swagger\Client\Model\Tag[]
+     * @return \Flagr\Client\Model\Tag[]
      */
     public function getTags()
     {
@@ -506,7 +506,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Sets tags
      *
-     * @param \Swagger\Client\Model\Tag[] $tags tags
+     * @param \Flagr\Client\Model\Tag[] $tags tags
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Gets variants
      *
-     * @return \Swagger\Client\Model\Variant[]
+     * @return \Flagr\Client\Model\Variant[]
      */
     public function getVariants()
     {
@@ -578,7 +578,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Sets variants
      *
-     * @param \Swagger\Client\Model\Variant[] $variants variants
+     * @param \Flagr\Client\Model\Variant[] $variants variants
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * EvaluationBatchRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class EvaluationBatchRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'enable_debug' => 'bool',
-'entities' => '\Swagger\Client\Model\EvaluationEntity[]',
+'entities' => '\Flagr\Client\Model\EvaluationEntity[]',
 'flag_i_ds' => 'int[]',
 'flag_keys' => 'string[]',
 'flag_tags' => 'string[]'    ];
@@ -250,7 +250,7 @@ class EvaluationBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Gets entities
      *
-     * @return \Swagger\Client\Model\EvaluationEntity[]
+     * @return \Flagr\Client\Model\EvaluationEntity[]
      */
     public function getEntities()
     {
@@ -260,7 +260,7 @@ class EvaluationBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Sets entities
      *
-     * @param \Swagger\Client\Model\EvaluationEntity[] $entities entities
+     * @param \Flagr\Client\Model\EvaluationEntity[] $entities entities
      *
      * @return $this
      */

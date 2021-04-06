@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * EvalResult Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class EvalResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'eval_context' => '\Swagger\Client\Model\EvalContext',
-'eval_debug_log' => '\Swagger\Client\Model\EvalDebugLog',
+        'eval_context' => '\Flagr\Client\Model\EvalContext',
+'eval_debug_log' => '\Flagr\Client\Model\EvalDebugLog',
 'flag_id' => 'int',
 'flag_key' => 'string',
 'flag_snapshot_id' => 'int',
@@ -253,7 +253,7 @@ class EvalResult implements ModelInterface, ArrayAccess
     /**
      * Gets eval_context
      *
-     * @return \Swagger\Client\Model\EvalContext
+     * @return \Flagr\Client\Model\EvalContext
      */
     public function getEvalContext()
     {
@@ -263,7 +263,7 @@ class EvalResult implements ModelInterface, ArrayAccess
     /**
      * Sets eval_context
      *
-     * @param \Swagger\Client\Model\EvalContext $eval_context eval_context
+     * @param \Flagr\Client\Model\EvalContext $eval_context eval_context
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class EvalResult implements ModelInterface, ArrayAccess
     /**
      * Gets eval_debug_log
      *
-     * @return \Swagger\Client\Model\EvalDebugLog
+     * @return \Flagr\Client\Model\EvalDebugLog
      */
     public function getEvalDebugLog()
     {
@@ -287,7 +287,7 @@ class EvalResult implements ModelInterface, ArrayAccess
     /**
      * Sets eval_debug_log
      *
-     * @param \Swagger\Client\Model\EvalDebugLog $eval_debug_log eval_debug_log
+     * @param \Flagr\Client\Model\EvalDebugLog $eval_debug_log eval_debug_log
      *
      * @return $this
      */

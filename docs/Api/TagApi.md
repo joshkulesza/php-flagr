@@ -1,4 +1,4 @@
-# Swagger\Client\TagApi
+# Flagr\Client\TagApi
 
 All URIs are relative to */api/v1*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**findTags**](TagApi.md#findtags) | **GET** /flags/{flagID}/tags | 
 
 # **createTag**
-> \Swagger\Client\Model\Tag createTag($body, $flag_id)
+> \Flagr\Client\Model\Tag createTag($body, $flag_id)
 
 
 
@@ -19,12 +19,12 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\TagApi(
+$apiInstance = new Flagr\Client\Flagr\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\CreateTagRequest(); // \Swagger\Client\Model\CreateTagRequest | create a tag
+$body = new \Flagr\Client\Model\CreateTagRequest(); // \Flagr\Client\Model\CreateTagRequest | create a tag
 $flag_id = 789; // int | numeric ID of the flag
 
 try {
@@ -40,12 +40,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateTagRequest**](../Model/CreateTagRequest.md)| create a tag |
+ **body** | [**\Flagr\Client\Model\CreateTagRequest**](../Model/CreateTagRequest.md)| create a tag |
  **flag_id** | **int**| numeric ID of the flag |
 
 ### Return type
 
-[**\Swagger\Client\Model\Tag**](../Model/Tag.md)
+[**\Flagr\Client\Model\Tag**](../Model/Tag.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\TagApi(
+$apiInstance = new Flagr\Client\Flagr\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findAllTags**
-> \Swagger\Client\Model\Tag[] findAllTags($limit, $offset, $value_like)
+> \Flagr\Client\Model\Tag[] findAllTags($limit, $offset, $value_like)
 
 
 
@@ -116,7 +116,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\TagApi(
+$apiInstance = new Flagr\Client\Flagr\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Tag[]**](../Model/Tag.md)
+[**\Flagr\Client\Model\Tag[]**](../Model/Tag.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findTags**
-> \Swagger\Client\Model\Tag[] findTags($flag_id)
+> \Flagr\Client\Model\Tag[] findTags($flag_id)
 
 
 
@@ -167,7 +167,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\TagApi(
+$apiInstance = new Flagr\Client\Flagr\TagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Tag[]**](../Model/Tag.md)
+[**\Flagr\Client\Model\Tag[]**](../Model/Tag.md)
 
 ### Authorization
 

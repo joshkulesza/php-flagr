@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * EvalDebugLog Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class EvalDebugLog implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'msg' => 'string',
-'segment_debug_logs' => '\Swagger\Client\Model\SegmentDebugLog[]'    ];
+'segment_debug_logs' => '\Flagr\Client\Model\SegmentDebugLog[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class EvalDebugLog implements ModelInterface, ArrayAccess
     /**
      * Gets segment_debug_logs
      *
-     * @return \Swagger\Client\Model\SegmentDebugLog[]
+     * @return \Flagr\Client\Model\SegmentDebugLog[]
      */
     public function getSegmentDebugLogs()
     {
@@ -239,7 +239,7 @@ class EvalDebugLog implements ModelInterface, ArrayAccess
     /**
      * Sets segment_debug_logs
      *
-     * @param \Swagger\Client\Model\SegmentDebugLog[] $segment_debug_logs segment_debug_logs
+     * @param \Flagr\Client\Model\SegmentDebugLog[] $segment_debug_logs segment_debug_logs
      *
      * @return $this
      */

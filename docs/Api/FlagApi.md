@@ -1,4 +1,4 @@
-# Swagger\Client\FlagApi
+# Flagr\Client\FlagApi
 
 All URIs are relative to */api/v1*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**setFlagEnabled**](FlagApi.md#setflagenabled) | **PUT** /flags/{flagID}/enabled | 
 
 # **createFlag**
-> \Swagger\Client\Model\Flag createFlag($body)
+> \Flagr\Client\Model\Flag createFlag($body)
 
 
 
@@ -24,12 +24,12 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\CreateFlagRequest(); // \Swagger\Client\Model\CreateFlagRequest | create a flag
+$body = new \Flagr\Client\Model\CreateFlagRequest(); // \Flagr\Client\Model\CreateFlagRequest | create a flag
 
 try {
     $result = $apiInstance->createFlag($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateFlagRequest**](../Model/CreateFlagRequest.md)| create a flag |
+ **body** | [**\Flagr\Client\Model\CreateFlagRequest**](../Model/CreateFlagRequest.md)| create a flag |
 
 ### Return type
 
-[**\Swagger\Client\Model\Flag**](../Model/Flag.md)
+[**\Flagr\Client\Model\Flag**](../Model/Flag.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findFlags**
-> \Swagger\Client\Model\Flag[] findFlags($limit, $enabled, $description, $tags, $description_like, $key, $offset, $preload, $deleted)
+> \Flagr\Client\Model\Flag[] findFlags($limit, $enabled, $description, $tags, $description_like, $key, $offset, $preload, $deleted)
 
 
 
@@ -117,7 +117,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Flag[]**](../Model/Flag.md)
+[**\Flagr\Client\Model\Flag[]**](../Model/Flag.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFlag**
-> \Swagger\Client\Model\Flag getFlag($flag_id)
+> \Flagr\Client\Model\Flag getFlag($flag_id)
 
 
 
@@ -180,7 +180,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Flag**](../Model/Flag.md)
+[**\Flagr\Client\Model\Flag**](../Model/Flag.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -261,7 +261,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFlagSnapshots**
-> \Swagger\Client\Model\FlagSnapshot[] getFlagSnapshots($flag_id)
+> \Flagr\Client\Model\FlagSnapshot[] getFlagSnapshots($flag_id)
 
 
 
@@ -270,7 +270,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FlagSnapshot[]**](../Model/FlagSnapshot.md)
+[**\Flagr\Client\Model\FlagSnapshot[]**](../Model/FlagSnapshot.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFlag**
-> \Swagger\Client\Model\Flag putFlag($body, $flag_id)
+> \Flagr\Client\Model\Flag putFlag($body, $flag_id)
 
 
 
@@ -317,12 +317,12 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\PutFlagRequest(); // \Swagger\Client\Model\PutFlagRequest | update a flag
+$body = new \Flagr\Client\Model\PutFlagRequest(); // \Flagr\Client\Model\PutFlagRequest | update a flag
 $flag_id = 789; // int | numeric ID of the flag to get
 
 try {
@@ -338,12 +338,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\PutFlagRequest**](../Model/PutFlagRequest.md)| update a flag |
+ **body** | [**\Flagr\Client\Model\PutFlagRequest**](../Model/PutFlagRequest.md)| update a flag |
  **flag_id** | **int**| numeric ID of the flag to get |
 
 ### Return type
 
-[**\Swagger\Client\Model\Flag**](../Model/Flag.md)
+[**\Flagr\Client\Model\Flag**](../Model/Flag.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **restoreFlag**
-> \Swagger\Client\Model\Flag restoreFlag($flag_id)
+> \Flagr\Client\Model\Flag restoreFlag($flag_id)
 
 
 
@@ -366,7 +366,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Flag**](../Model/Flag.md)
+[**\Flagr\Client\Model\Flag**](../Model/Flag.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setFlagEnabled**
-> \Swagger\Client\Model\Flag setFlagEnabled($body, $flag_id)
+> \Flagr\Client\Model\Flag setFlagEnabled($body, $flag_id)
 
 
 
@@ -413,12 +413,12 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\FlagApi(
+$apiInstance = new Flagr\Client\Flagr\FlagApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\SetFlagEnabledRequest(); // \Swagger\Client\Model\SetFlagEnabledRequest | set flag enabled state
+$body = new \Flagr\Client\Model\SetFlagEnabledRequest(); // \Flagr\Client\Model\SetFlagEnabledRequest | set flag enabled state
 $flag_id = 789; // int | numeric ID of the flag to get
 
 try {
@@ -434,12 +434,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SetFlagEnabledRequest**](../Model/SetFlagEnabledRequest.md)| set flag enabled state |
+ **body** | [**\Flagr\Client\Model\SetFlagEnabledRequest**](../Model/SetFlagEnabledRequest.md)| set flag enabled state |
  **flag_id** | **int**| numeric ID of the flag to get |
 
 ### Return type
 
-[**\Swagger\Client\Model\Flag**](../Model/Flag.md)
+[**\Flagr\Client\Model\Flag**](../Model/Flag.md)
 
 ### Authorization
 

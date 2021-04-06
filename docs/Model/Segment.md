@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**constraints** | [**\Swagger\Client\Model\Constraint[]**](Constraint.md) |  | [optional] 
+**constraints** | [**\Flagr\Client\Model\Constraint[]**](Constraint.md) |  | [optional] 
 **description** | **string** |  | 
-**distributions** | [**\Swagger\Client\Model\Distribution[]**](Distribution.md) |  | [optional] 
+**distributions** | [**\Flagr\Client\Model\Distribution[]**](Distribution.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **rank** | **int** |  | 
 **rollout_percent** | **int** |  | 

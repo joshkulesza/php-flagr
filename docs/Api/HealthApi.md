@@ -1,4 +1,4 @@
-# Swagger\Client\HealthApi
+# Flagr\Client\HealthApi
 
 All URIs are relative to */api/v1*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getHealth**](HealthApi.md#gethealth) | **GET** /health | 
 
 # **getHealth**
-> \Swagger\Client\Model\Health getHealth()
+> \Flagr\Client\Model\Health getHealth()
 
 
 
@@ -18,7 +18,7 @@ Check if Flagr is healthy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\HealthApi(
+$apiInstance = new Flagr\Client\Flagr\HealthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -38,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\Health**](../Model/Health.md)
+[**\Flagr\Client\Model\Health**](../Model/Health.md)
 
 ### Authorization
 

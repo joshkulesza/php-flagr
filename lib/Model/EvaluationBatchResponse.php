@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * EvaluationBatchResponse Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class EvaluationBatchResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'evaluation_results' => '\Swagger\Client\Model\EvalResult[]'    ];
+        'evaluation_results' => '\Flagr\Client\Model\EvalResult[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class EvaluationBatchResponse implements ModelInterface, ArrayAccess
     /**
      * Gets evaluation_results
      *
-     * @return \Swagger\Client\Model\EvalResult[]
+     * @return \Flagr\Client\Model\EvalResult[]
      */
     public function getEvaluationResults()
     {
@@ -212,7 +212,7 @@ class EvaluationBatchResponse implements ModelInterface, ArrayAccess
     /**
      * Sets evaluation_results
      *
-     * @param \Swagger\Client\Model\EvalResult[] $evaluation_results evaluation_results
+     * @param \Flagr\Client\Model\EvalResult[] $evaluation_results evaluation_results
      *
      * @return $this
      */

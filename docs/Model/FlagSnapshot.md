@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flag** | [**\Swagger\Client\Model\Flag**](Flag.md) |  | 
+**flag** | [**\Flagr\Client\Model\Flag**](Flag.md) |  | 
 **id** | **int** |  | 
 **updated_at** | **string** |  | 
 **updated_by** | **string** |  | [optional] 

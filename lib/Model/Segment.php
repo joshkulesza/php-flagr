@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * Segment Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class Segment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'constraints' => '\Swagger\Client\Model\Constraint[]',
+        'constraints' => '\Flagr\Client\Model\Constraint[]',
 'description' => 'string',
-'distributions' => '\Swagger\Client\Model\Distribution[]',
+'distributions' => '\Flagr\Client\Model\Distribution[]',
 'id' => 'int',
 'rank' => 'int',
 'rollout_percent' => 'int'    ];
@@ -238,7 +238,7 @@ class Segment implements ModelInterface, ArrayAccess
     /**
      * Gets constraints
      *
-     * @return \Swagger\Client\Model\Constraint[]
+     * @return \Flagr\Client\Model\Constraint[]
      */
     public function getConstraints()
     {
@@ -248,7 +248,7 @@ class Segment implements ModelInterface, ArrayAccess
     /**
      * Sets constraints
      *
-     * @param \Swagger\Client\Model\Constraint[] $constraints constraints
+     * @param \Flagr\Client\Model\Constraint[] $constraints constraints
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class Segment implements ModelInterface, ArrayAccess
     /**
      * Gets distributions
      *
-     * @return \Swagger\Client\Model\Distribution[]
+     * @return \Flagr\Client\Model\Distribution[]
      */
     public function getDistributions()
     {
@@ -296,7 +296,7 @@ class Segment implements ModelInterface, ArrayAccess
     /**
      * Sets distributions
      *
-     * @param \Swagger\Client\Model\Distribution[] $distributions distributions
+     * @param \Flagr\Client\Model\Distribution[] $distributions distributions
      *
      * @return $this
      */

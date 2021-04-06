@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * FlagSnapshot Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class FlagSnapshot implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'flag' => '\Swagger\Client\Model\Flag',
+        'flag' => '\Flagr\Client\Model\Flag',
 'id' => 'int',
 'updated_at' => 'string',
 'updated_by' => 'string'    ];
@@ -226,7 +226,7 @@ class FlagSnapshot implements ModelInterface, ArrayAccess
     /**
      * Gets flag
      *
-     * @return \Swagger\Client\Model\Flag
+     * @return \Flagr\Client\Model\Flag
      */
     public function getFlag()
     {
@@ -236,7 +236,7 @@ class FlagSnapshot implements ModelInterface, ArrayAccess
     /**
      * Sets flag
      *
-     * @param \Swagger\Client\Model\Flag $flag flag
+     * @param \Flagr\Client\Model\Flag $flag flag
      *
      * @return $this
      */

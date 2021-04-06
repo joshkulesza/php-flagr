@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Flagr\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Flagr\Client\ObjectSerializer;
 
 /**
  * PutDistributionsRequest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class PutDistributionsRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'distributions' => '\Swagger\Client\Model\Distribution[]'    ];
+        'distributions' => '\Flagr\Client\Model\Distribution[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class PutDistributionsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets distributions
      *
-     * @return \Swagger\Client\Model\Distribution[]
+     * @return \Flagr\Client\Model\Distribution[]
      */
     public function getDistributions()
     {
@@ -212,7 +212,7 @@ class PutDistributionsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets distributions
      *
-     * @param \Swagger\Client\Model\Distribution[] $distributions distributions
+     * @param \Flagr\Client\Model\Distribution[] $distributions distributions
      *
      * @return $this
      */

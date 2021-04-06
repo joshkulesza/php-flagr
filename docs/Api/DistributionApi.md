@@ -1,4 +1,4 @@
-# Swagger\Client\DistributionApi
+# Flagr\Client\DistributionApi
 
 All URIs are relative to */api/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**putDistributions**](DistributionApi.md#putdistributions) | **PUT** /flags/{flagID}/segments/{segmentID}/distributions | 
 
 # **findDistributions**
-> \Swagger\Client\Model\Distribution[] findDistributions($flag_id, $segment_id)
+> \Flagr\Client\Model\Distribution[] findDistributions($flag_id, $segment_id)
 
 
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\DistributionApi(
+$apiInstance = new Flagr\Client\Flagr\DistributionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Distribution[]**](../Model/Distribution.md)
+[**\Flagr\Client\Model\Distribution[]**](../Model/Distribution.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putDistributions**
-> \Swagger\Client\Model\Distribution[] putDistributions($body, $flag_id, $segment_id)
+> \Flagr\Client\Model\Distribution[] putDistributions($body, $flag_id, $segment_id)
 
 
 
@@ -68,12 +68,12 @@ replace the distribution with the new setting
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\DistributionApi(
+$apiInstance = new Flagr\Client\Flagr\DistributionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\PutDistributionsRequest(); // \Swagger\Client\Model\PutDistributionsRequest | array of distributions
+$body = new \Flagr\Client\Model\PutDistributionsRequest(); // \Flagr\Client\Model\PutDistributionsRequest | array of distributions
 $flag_id = 789; // int | numeric ID of the flag
 $segment_id = 789; // int | numeric ID of the segment
 
@@ -90,13 +90,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\PutDistributionsRequest**](../Model/PutDistributionsRequest.md)| array of distributions |
+ **body** | [**\Flagr\Client\Model\PutDistributionsRequest**](../Model/PutDistributionsRequest.md)| array of distributions |
  **flag_id** | **int**| numeric ID of the flag |
  **segment_id** | **int**| numeric ID of the segment |
 
 ### Return type
 
-[**\Swagger\Client\Model\Distribution[]**](../Model/Distribution.md)
+[**\Flagr\Client\Model\Distribution[]**](../Model/Distribution.md)
 
 ### Authorization
 

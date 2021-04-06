@@ -1,4 +1,4 @@
-# Swagger\Client\VariantApi
+# Flagr\Client\VariantApi
 
 All URIs are relative to */api/v1*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putVariant**](VariantApi.md#putvariant) | **PUT** /flags/{flagID}/variants/{variantID} | 
 
 # **createVariant**
-> \Swagger\Client\Model\Variant createVariant($body, $flag_id)
+> \Flagr\Client\Model\Variant createVariant($body, $flag_id)
 
 
 
@@ -19,12 +19,12 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\VariantApi(
+$apiInstance = new Flagr\Client\Flagr\VariantApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\CreateVariantRequest(); // \Swagger\Client\Model\CreateVariantRequest | create a variant
+$body = new \Flagr\Client\Model\CreateVariantRequest(); // \Flagr\Client\Model\CreateVariantRequest | create a variant
 $flag_id = 789; // int | numeric ID of the flag
 
 try {
@@ -40,12 +40,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateVariantRequest**](../Model/CreateVariantRequest.md)| create a variant |
+ **body** | [**\Flagr\Client\Model\CreateVariantRequest**](../Model/CreateVariantRequest.md)| create a variant |
  **flag_id** | **int**| numeric ID of the flag |
 
 ### Return type
 
-[**\Swagger\Client\Model\Variant**](../Model/Variant.md)
+[**\Flagr\Client\Model\Variant**](../Model/Variant.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\VariantApi(
+$apiInstance = new Flagr\Client\Flagr\VariantApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findVariants**
-> \Swagger\Client\Model\Variant[] findVariants($flag_id)
+> \Flagr\Client\Model\Variant[] findVariants($flag_id)
 
 
 
@@ -116,7 +116,7 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\VariantApi(
+$apiInstance = new Flagr\Client\Flagr\VariantApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Variant[]**](../Model/Variant.md)
+[**\Flagr\Client\Model\Variant[]**](../Model/Variant.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putVariant**
-> \Swagger\Client\Model\Variant putVariant($body, $flag_id, $variant_id)
+> \Flagr\Client\Model\Variant putVariant($body, $flag_id, $variant_id)
 
 
 
@@ -163,12 +163,12 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\VariantApi(
+$apiInstance = new Flagr\Client\Flagr\VariantApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\PutVariantRequest(); // \Swagger\Client\Model\PutVariantRequest | update a variant
+$body = new \Flagr\Client\Model\PutVariantRequest(); // \Flagr\Client\Model\PutVariantRequest | update a variant
 $flag_id = 789; // int | numeric ID of the flag
 $variant_id = 789; // int | numeric ID of the variant
 
@@ -185,13 +185,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\PutVariantRequest**](../Model/PutVariantRequest.md)| update a variant |
+ **body** | [**\Flagr\Client\Model\PutVariantRequest**](../Model/PutVariantRequest.md)| update a variant |
  **flag_id** | **int**| numeric ID of the flag |
  **variant_id** | **int**| numeric ID of the variant |
 
 ### Return type
 
-[**\Swagger\Client\Model\Variant**](../Model/Variant.md)
+[**\Flagr\Client\Model\Variant**](../Model/Variant.md)
 
 ### Authorization
 

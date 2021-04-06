@@ -1,4 +1,4 @@
-# Swagger\Client\EvaluationApi
+# Flagr\Client\EvaluationApi
 
 All URIs are relative to */api/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**postEvaluationBatch**](EvaluationApi.md#postevaluationbatch) | **POST** /evaluation/batch | 
 
 # **postEvaluation**
-> \Swagger\Client\Model\EvalResult postEvaluation($body)
+> \Flagr\Client\Model\EvalResult postEvaluation($body)
 
 
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\EvaluationApi(
+$apiInstance = new Flagr\Client\Flagr\EvaluationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\EvalContext(); // \Swagger\Client\Model\EvalContext | evalution context
+$body = new \Flagr\Client\Model\EvalContext(); // \Flagr\Client\Model\EvalContext | evalution context
 
 try {
     $result = $apiInstance->postEvaluation($body);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EvalContext**](../Model/EvalContext.md)| evalution context |
+ **body** | [**\Flagr\Client\Model\EvalContext**](../Model/EvalContext.md)| evalution context |
 
 ### Return type
 
-[**\Swagger\Client\Model\EvalResult**](../Model/EvalResult.md)
+[**\Flagr\Client\Model\EvalResult**](../Model/EvalResult.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postEvaluationBatch**
-> \Swagger\Client\Model\EvaluationBatchResponse postEvaluationBatch($body)
+> \Flagr\Client\Model\EvaluationBatchResponse postEvaluationBatch($body)
 
 
 
@@ -64,12 +64,12 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\EvaluationApi(
+$apiInstance = new Flagr\Client\Flagr\EvaluationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\EvaluationBatchRequest(); // \Swagger\Client\Model\EvaluationBatchRequest | evalution batch request
+$body = new \Flagr\Client\Model\EvaluationBatchRequest(); // \Flagr\Client\Model\EvaluationBatchRequest | evalution batch request
 
 try {
     $result = $apiInstance->postEvaluationBatch($body);
@@ -84,11 +84,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EvaluationBatchRequest**](../Model/EvaluationBatchRequest.md)| evalution batch request |
+ **body** | [**\Flagr\Client\Model\EvaluationBatchRequest**](../Model/EvaluationBatchRequest.md)| evalution batch request |
 
 ### Return type
 
-[**\Swagger\Client\Model\EvaluationBatchResponse**](../Model/EvaluationBatchResponse.md)
+[**\Flagr\Client\Model\EvaluationBatchResponse**](../Model/EvaluationBatchResponse.md)
 
 ### Authorization
 

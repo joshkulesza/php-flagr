@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eval_context** | [**\Swagger\Client\Model\EvalContext**](EvalContext.md) |  | [optional] 
-**eval_debug_log** | [**\Swagger\Client\Model\EvalDebugLog**](EvalDebugLog.md) |  | [optional] 
+**eval_context** | [**\Flagr\Client\Model\EvalContext**](EvalContext.md) |  | [optional] 
+**eval_debug_log** | [**\Flagr\Client\Model\EvalDebugLog**](EvalDebugLog.md) |  | [optional] 
 **flag_id** | **int** |  | [optional] 
 **flag_key** | **string** |  | [optional] 
 **flag_snapshot_id** | **int** |  | [optional] 

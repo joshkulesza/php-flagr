@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Flagr\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Flagr\Client\ApiException;
+use Flagr\Client\Configuration;
+use Flagr\Client\HeaderSelector;
+use Flagr\Client\ObjectSerializer;
 
 /**
  * HealthApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Flagr\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,9 +90,9 @@ class HealthApi
      * Operation getHealth
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Flagr\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Health
+     * @return \Flagr\Client\Model\Health
      */
     public function getHealth()
     {
@@ -104,13 +104,13 @@ class HealthApi
      * Operation getHealthWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Flagr\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Health, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flagr\Client\Model\Health, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHealthWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Health';
+        $returnType = '\Flagr\Client\Model\Health';
         $request = $this->getHealthRequest();
 
         try {
@@ -162,7 +162,7 @@ class HealthApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Health',
+                        '\Flagr\Client\Model\Health',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -170,7 +170,7 @@ class HealthApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Flagr\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class HealthApi
      */
     public function getHealthAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Health';
+        $returnType = '\Flagr\Client\Model\Health';
         $request = $this->getHealthRequest();
 
         return $this->client

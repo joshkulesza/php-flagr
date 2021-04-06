@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **key** | **string** | unique key representation of the flag | [optional] 
 **notes** | **string** | flag usage details in markdown format | [optional] 
-**segments** | [**\Swagger\Client\Model\Segment[]**](Segment.md) |  | [optional] 
-**tags** | [**\Swagger\Client\Model\Tag[]**](Tag.md) |  | [optional] 
+**segments** | [**\Flagr\Client\Model\Segment[]**](Segment.md) |  | [optional] 
+**tags** | [**\Flagr\Client\Model\Tag[]**](Tag.md) |  | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **updated_by** | **string** |  | [optional] 
-**variants** | [**\Swagger\Client\Model\Variant[]**](Variant.md) |  | [optional] 
+**variants** | [**\Flagr\Client\Model\Variant[]**](Variant.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

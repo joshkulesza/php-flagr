@@ -36,7 +36,7 @@ Then run `composer install`
 Download the files and include `autoload.php`:
 
 ```php
-    require_once('/path/to/Flagr/vendor/autoload.php');
+    require_once('/path/to/php-flagr/vendor/autoload.php');
 ```
 
 ## Tests
@@ -56,12 +56,12 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\ConstraintApi(
+$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\CreateConstraintRequest(); // \Swagger\Client\Model\CreateConstraintRequest | create a constraint
+$body = new \Flagr\Client\Model\CreateConstraintRequest(); // \Flagr\Client\Model\CreateConstraintRequest | create a constraint
 $flag_id = 789; // int | numeric ID of the flag
 $segment_id = 789; // int | numeric ID of the segment
 
@@ -72,7 +72,7 @@ try {
     echo 'Exception when calling ConstraintApi->createConstraint: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Swagger\Client\Api\ConstraintApi(
+$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -87,7 +87,7 @@ try {
     echo 'Exception when calling ConstraintApi->deleteConstraint: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Swagger\Client\Api\ConstraintApi(
+$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -102,12 +102,12 @@ try {
     echo 'Exception when calling ConstraintApi->findConstraints: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Swagger\Client\Api\ConstraintApi(
+$apiInstance = new Flagr\Client\Flagr\ConstraintApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\CreateConstraintRequest(); // \Swagger\Client\Model\CreateConstraintRequest | create a constraint
+$body = new \Flagr\Client\Model\CreateConstraintRequest(); // \Flagr\Client\Model\CreateConstraintRequest | create a constraint
 $flag_id = 789; // int | numeric ID of the flag
 $segment_id = 789; // int | numeric ID of the segment
 $constraint_id = 789; // int | numeric ID of the constraint
