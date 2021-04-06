@@ -89,11 +89,11 @@ class FlagApi
     /**
      * Operation createFlag
      *
-     * @param  \Swagger\Client\Model\CreateFlagRequest $body create a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateFlagRequest $body create a flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Flag
+     * @return \Swagger\Client\Flagr\Flag
      */
     public function createFlag($body)
     {
@@ -104,15 +104,15 @@ class FlagApi
     /**
      * Operation createFlagWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\CreateFlagRequest $body create a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateFlagRequest $body create a flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Flag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Flag, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFlagWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->createFlagRequest($body);
 
         try {
@@ -164,7 +164,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Flag',
+                        '\Swagger\Client\Flagr\Flag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -172,7 +172,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class FlagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateFlagRequest $body create a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateFlagRequest $body create a flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -207,14 +207,14 @@ class FlagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateFlagRequest $body create a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateFlagRequest $body create a flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createFlagAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->createFlagRequest($body);
 
         return $this->client
@@ -257,7 +257,7 @@ class FlagApi
     /**
      * Create request for operation 'createFlag'
      *
-     * @param  \Swagger\Client\Model\CreateFlagRequest $body create a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateFlagRequest $body create a flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -410,7 +410,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -591,7 +591,7 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Flag[]
+     * @return \Swagger\Client\Flagr\Flag[]
      */
     public function findFlags($limit = null, $enabled = null, $description = null, $tags = null, $description_like = null, $key = null, $offset = null, $preload = null, $deleted = null)
     {
@@ -614,11 +614,11 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Flag[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Flag[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findFlagsWithHttpInfo($limit = null, $enabled = null, $description = null, $tags = null, $description_like = null, $key = null, $offset = null, $preload = null, $deleted = null)
     {
-        $returnType = '\Swagger\Client\Model\Flag[]';
+        $returnType = '\Swagger\Client\Flagr\Flag[]';
         $request = $this->findFlagsRequest($limit, $enabled, $description, $tags, $description_like, $key, $offset, $preload, $deleted);
 
         try {
@@ -670,7 +670,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Flag[]',
+                        '\Swagger\Client\Flagr\Flag[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -678,7 +678,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -736,7 +736,7 @@ class FlagApi
      */
     public function findFlagsAsyncWithHttpInfo($limit = null, $enabled = null, $description = null, $tags = null, $description_like = null, $key = null, $offset = null, $preload = null, $deleted = null)
     {
-        $returnType = '\Swagger\Client\Model\Flag[]';
+        $returnType = '\Swagger\Client\Flagr\Flag[]';
         $request = $this->findFlagsRequest($limit, $enabled, $description, $tags, $description_like, $key, $offset, $preload, $deleted);
 
         return $this->client
@@ -911,7 +911,7 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Flag
+     * @return \Swagger\Client\Flagr\Flag
      */
     public function getFlag($flag_id)
     {
@@ -926,11 +926,11 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Flag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Flag, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFlagWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->getFlagRequest($flag_id);
 
         try {
@@ -982,7 +982,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Flag',
+                        '\Swagger\Client\Flagr\Flag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class FlagApi
      */
     public function getFlagAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->getFlagRequest($flag_id);
 
         return $this->client
@@ -1254,7 +1254,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1424,7 +1424,7 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FlagSnapshot[]
+     * @return \Swagger\Client\Flagr\FlagSnapshot[]
      */
     public function getFlagSnapshots($flag_id)
     {
@@ -1439,11 +1439,11 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FlagSnapshot[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\FlagSnapshot[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getFlagSnapshotsWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\FlagSnapshot[]';
+        $returnType = '\Swagger\Client\Flagr\FlagSnapshot[]';
         $request = $this->getFlagSnapshotsRequest($flag_id);
 
         try {
@@ -1495,7 +1495,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FlagSnapshot[]',
+                        '\Swagger\Client\Flagr\FlagSnapshot[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1503,7 +1503,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1545,7 +1545,7 @@ class FlagApi
      */
     public function getFlagSnapshotsAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\FlagSnapshot[]';
+        $returnType = '\Swagger\Client\Flagr\FlagSnapshot[]';
         $request = $this->getFlagSnapshotsRequest($flag_id);
 
         return $this->client
@@ -1686,12 +1686,12 @@ class FlagApi
     /**
      * Operation putFlag
      *
-     * @param  \Swagger\Client\Model\PutFlagRequest $body update a flag (required)
+     * @param  \Swagger\Client\Flagr\PutFlagRequest $body update a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Flag
+     * @return \Swagger\Client\Flagr\Flag
      */
     public function putFlag($body, $flag_id)
     {
@@ -1702,16 +1702,16 @@ class FlagApi
     /**
      * Operation putFlagWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\PutFlagRequest $body update a flag (required)
+     * @param  \Swagger\Client\Flagr\PutFlagRequest $body update a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Flag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Flag, HTTP status code, HTTP response headers (array of strings)
      */
     public function putFlagWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->putFlagRequest($body, $flag_id);
 
         try {
@@ -1763,7 +1763,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Flag',
+                        '\Swagger\Client\Flagr\Flag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1771,7 +1771,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1786,7 +1786,7 @@ class FlagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutFlagRequest $body update a flag (required)
+     * @param  \Swagger\Client\Flagr\PutFlagRequest $body update a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -1807,7 +1807,7 @@ class FlagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutFlagRequest $body update a flag (required)
+     * @param  \Swagger\Client\Flagr\PutFlagRequest $body update a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -1815,7 +1815,7 @@ class FlagApi
      */
     public function putFlagAsyncWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->putFlagRequest($body, $flag_id);
 
         return $this->client
@@ -1858,7 +1858,7 @@ class FlagApi
     /**
      * Create request for operation 'putFlag'
      *
-     * @param  \Swagger\Client\Model\PutFlagRequest $body update a flag (required)
+     * @param  \Swagger\Client\Flagr\PutFlagRequest $body update a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -1970,7 +1970,7 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Flag
+     * @return \Swagger\Client\Flagr\Flag
      */
     public function restoreFlag($flag_id)
     {
@@ -1985,11 +1985,11 @@ class FlagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Flag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Flag, HTTP status code, HTTP response headers (array of strings)
      */
     public function restoreFlagWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->restoreFlagRequest($flag_id);
 
         try {
@@ -2041,7 +2041,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Flag',
+                        '\Swagger\Client\Flagr\Flag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2049,7 +2049,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2091,7 +2091,7 @@ class FlagApi
      */
     public function restoreFlagAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->restoreFlagRequest($flag_id);
 
         return $this->client
@@ -2232,12 +2232,12 @@ class FlagApi
     /**
      * Operation setFlagEnabled
      *
-     * @param  \Swagger\Client\Model\SetFlagEnabledRequest $body set flag enabled state (required)
+     * @param  \Swagger\Client\Flagr\SetFlagEnabledRequest $body set flag enabled state (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Flag
+     * @return \Swagger\Client\Flagr\Flag
      */
     public function setFlagEnabled($body, $flag_id)
     {
@@ -2248,16 +2248,16 @@ class FlagApi
     /**
      * Operation setFlagEnabledWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\SetFlagEnabledRequest $body set flag enabled state (required)
+     * @param  \Swagger\Client\Flagr\SetFlagEnabledRequest $body set flag enabled state (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Flag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Flag, HTTP status code, HTTP response headers (array of strings)
      */
     public function setFlagEnabledWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->setFlagEnabledRequest($body, $flag_id);
 
         try {
@@ -2309,7 +2309,7 @@ class FlagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Flag',
+                        '\Swagger\Client\Flagr\Flag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2317,7 +2317,7 @@ class FlagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2332,7 +2332,7 @@ class FlagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\SetFlagEnabledRequest $body set flag enabled state (required)
+     * @param  \Swagger\Client\Flagr\SetFlagEnabledRequest $body set flag enabled state (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -2353,7 +2353,7 @@ class FlagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\SetFlagEnabledRequest $body set flag enabled state (required)
+     * @param  \Swagger\Client\Flagr\SetFlagEnabledRequest $body set flag enabled state (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -2361,7 +2361,7 @@ class FlagApi
      */
     public function setFlagEnabledAsyncWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Flag';
+        $returnType = '\Swagger\Client\Flagr\Flag';
         $request = $this->setFlagEnabledRequest($body, $flag_id);
 
         return $this->client
@@ -2404,7 +2404,7 @@ class FlagApi
     /**
      * Create request for operation 'setFlagEnabled'
      *
-     * @param  \Swagger\Client\Model\SetFlagEnabledRequest $body set flag enabled state (required)
+     * @param  \Swagger\Client\Flagr\SetFlagEnabledRequest $body set flag enabled state (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException

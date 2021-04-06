@@ -92,7 +92,7 @@ class HealthApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Health
+     * @return \Swagger\Client\Flagr\Health
      */
     public function getHealth()
     {
@@ -106,11 +106,11 @@ class HealthApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Health, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Health, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHealthWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Health';
+        $returnType = '\Swagger\Client\Flagr\Health';
         $request = $this->getHealthRequest();
 
         try {
@@ -162,7 +162,7 @@ class HealthApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Health',
+                        '\Swagger\Client\Flagr\Health',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -170,7 +170,7 @@ class HealthApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class HealthApi
      */
     public function getHealthAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\Health';
+        $returnType = '\Swagger\Client\Flagr\Health';
         $request = $this->getHealthRequest();
 
         return $this->client

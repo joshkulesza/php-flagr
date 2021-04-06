@@ -89,12 +89,12 @@ class SegmentApi
     /**
      * Operation createSegment
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateSegmentRequest $body create a segment under a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Segment
+     * @return \Swagger\Client\Flagr\Segment
      */
     public function createSegment($body, $flag_id)
     {
@@ -105,16 +105,16 @@ class SegmentApi
     /**
      * Operation createSegmentWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateSegmentRequest $body create a segment under a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Segment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Segment, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSegmentWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
+        $returnType = '\Swagger\Client\Flagr\Segment';
         $request = $this->createSegmentRequest($body, $flag_id);
 
         try {
@@ -166,7 +166,7 @@ class SegmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Segment',
+                        '\Swagger\Client\Flagr\Segment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +174,7 @@ class SegmentApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class SegmentApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateSegmentRequest $body create a segment under a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -210,7 +210,7 @@ class SegmentApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateSegmentRequest $body create a segment under a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -218,7 +218,7 @@ class SegmentApi
      */
     public function createSegmentAsyncWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
+        $returnType = '\Swagger\Client\Flagr\Segment';
         $request = $this->createSegmentRequest($body, $flag_id);
 
         return $this->client
@@ -261,7 +261,7 @@ class SegmentApi
     /**
      * Create request for operation 'createSegment'
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
+     * @param  \Swagger\Client\Flagr\CreateSegmentRequest $body create a segment under a flag (required)
      * @param  int $flag_id numeric ID of the flag to get (required)
      *
      * @throws \InvalidArgumentException
@@ -431,7 +431,7 @@ class SegmentApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -621,7 +621,7 @@ class SegmentApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Segment[]
+     * @return \Swagger\Client\Flagr\Segment[]
      */
     public function findSegments($flag_id)
     {
@@ -636,11 +636,11 @@ class SegmentApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Segment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Segment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findSegmentsWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment[]';
+        $returnType = '\Swagger\Client\Flagr\Segment[]';
         $request = $this->findSegmentsRequest($flag_id);
 
         try {
@@ -692,7 +692,7 @@ class SegmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Segment[]',
+                        '\Swagger\Client\Flagr\Segment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -700,7 +700,7 @@ class SegmentApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class SegmentApi
      */
     public function findSegmentsAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment[]';
+        $returnType = '\Swagger\Client\Flagr\Segment[]';
         $request = $this->findSegmentsRequest($flag_id);
 
         return $this->client
@@ -883,13 +883,13 @@ class SegmentApi
     /**
      * Operation putSegment
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentRequest $body update a segment (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Segment
+     * @return \Swagger\Client\Flagr\Segment
      */
     public function putSegment($body, $flag_id, $segment_id)
     {
@@ -900,17 +900,17 @@ class SegmentApi
     /**
      * Operation putSegmentWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentRequest $body update a segment (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Segment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Flagr\Segment, HTTP status code, HTTP response headers (array of strings)
      */
     public function putSegmentWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
+        $returnType = '\Swagger\Client\Flagr\Segment';
         $request = $this->putSegmentRequest($body, $flag_id, $segment_id);
 
         try {
@@ -962,7 +962,7 @@ class SegmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Segment',
+                        '\Swagger\Client\Flagr\Segment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -970,7 +970,7 @@ class SegmentApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -985,7 +985,7 @@ class SegmentApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentRequest $body update a segment (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -1007,7 +1007,7 @@ class SegmentApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentRequest $body update a segment (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -1016,7 +1016,7 @@ class SegmentApi
      */
     public function putSegmentAsyncWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
+        $returnType = '\Swagger\Client\Flagr\Segment';
         $request = $this->putSegmentRequest($body, $flag_id, $segment_id);
 
         return $this->client
@@ -1059,7 +1059,7 @@ class SegmentApi
     /**
      * Create request for operation 'putSegment'
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentRequest $body update a segment (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -1182,7 +1182,7 @@ class SegmentApi
     /**
      * Operation putSegmentsReorder
      *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentReorderRequest $body reorder segments (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -1197,7 +1197,7 @@ class SegmentApi
     /**
      * Operation putSegmentsReorderWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentReorderRequest $body reorder segments (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -1244,7 +1244,7 @@ class SegmentApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1259,7 +1259,7 @@ class SegmentApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentReorderRequest $body reorder segments (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -1280,7 +1280,7 @@ class SegmentApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentReorderRequest $body reorder segments (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -1317,7 +1317,7 @@ class SegmentApi
     /**
      * Create request for operation 'putSegmentsReorder'
      *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
+     * @param  \Swagger\Client\Flagr\PutSegmentReorderRequest $body reorder segments (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException

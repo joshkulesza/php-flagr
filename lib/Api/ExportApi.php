@@ -170,7 +170,7 @@ class ExportApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -419,7 +419,7 @@ class ExportApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
+                        '\Swagger\Client\Flagr\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
