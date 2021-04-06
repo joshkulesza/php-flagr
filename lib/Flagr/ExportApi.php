@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Flagr;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

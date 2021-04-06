@@ -89,13 +89,13 @@ class ConstraintApi
     /**
      * Operation createConstraint
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Constraint
+     * @return \Swagger\Client\Model\Constraint
      */
     public function createConstraint($body, $flag_id, $segment_id)
     {
@@ -106,17 +106,17 @@ class ConstraintApi
     /**
      * Operation createConstraintWithHttpInfo
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Constraint, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Constraint, HTTP status code, HTTP response headers (array of strings)
      */
     public function createConstraintWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Constraint';
+        $returnType = '\Swagger\Client\Model\Constraint';
         $request = $this->createConstraintRequest($body, $flag_id, $segment_id);
 
         try {
@@ -168,7 +168,7 @@ class ConstraintApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Constraint',
+                        '\Swagger\Client\Model\Constraint',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -176,7 +176,7 @@ class ConstraintApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -191,7 +191,7 @@ class ConstraintApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -213,7 +213,7 @@ class ConstraintApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -222,7 +222,7 @@ class ConstraintApi
      */
     public function createConstraintAsyncWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Constraint';
+        $returnType = '\Swagger\Client\Model\Constraint';
         $request = $this->createConstraintRequest($body, $flag_id, $segment_id);
 
         return $this->client
@@ -265,7 +265,7 @@ class ConstraintApi
     /**
      * Create request for operation 'createConstraint'
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -452,7 +452,7 @@ class ConstraintApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -660,7 +660,7 @@ class ConstraintApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Constraint[]
+     * @return \Swagger\Client\Model\Constraint[]
      */
     public function findConstraints($flag_id, $segment_id)
     {
@@ -676,11 +676,11 @@ class ConstraintApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Constraint[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Constraint[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findConstraintsWithHttpInfo($flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Constraint[]';
+        $returnType = '\Swagger\Client\Model\Constraint[]';
         $request = $this->findConstraintsRequest($flag_id, $segment_id);
 
         try {
@@ -732,7 +732,7 @@ class ConstraintApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Constraint[]',
+                        '\Swagger\Client\Model\Constraint[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -740,7 +740,7 @@ class ConstraintApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -784,7 +784,7 @@ class ConstraintApi
      */
     public function findConstraintsAsyncWithHttpInfo($flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Constraint[]';
+        $returnType = '\Swagger\Client\Model\Constraint[]';
         $request = $this->findConstraintsRequest($flag_id, $segment_id);
 
         return $this->client
@@ -940,14 +940,14 @@ class ConstraintApi
     /**
      * Operation putConstraint
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      * @param  int $constraint_id numeric ID of the constraint (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Constraint
+     * @return \Swagger\Client\Model\Constraint
      */
     public function putConstraint($body, $flag_id, $segment_id, $constraint_id)
     {
@@ -958,18 +958,18 @@ class ConstraintApi
     /**
      * Operation putConstraintWithHttpInfo
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      * @param  int $constraint_id numeric ID of the constraint (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Constraint, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Constraint, HTTP status code, HTTP response headers (array of strings)
      */
     public function putConstraintWithHttpInfo($body, $flag_id, $segment_id, $constraint_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Constraint';
+        $returnType = '\Swagger\Client\Model\Constraint';
         $request = $this->putConstraintRequest($body, $flag_id, $segment_id, $constraint_id);
 
         try {
@@ -1021,7 +1021,7 @@ class ConstraintApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Constraint',
+                        '\Swagger\Client\Model\Constraint',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1029,7 +1029,7 @@ class ConstraintApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1044,7 +1044,7 @@ class ConstraintApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      * @param  int $constraint_id numeric ID of the constraint (required)
@@ -1067,7 +1067,7 @@ class ConstraintApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      * @param  int $constraint_id numeric ID of the constraint (required)
@@ -1077,7 +1077,7 @@ class ConstraintApi
      */
     public function putConstraintAsyncWithHttpInfo($body, $flag_id, $segment_id, $constraint_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Constraint';
+        $returnType = '\Swagger\Client\Model\Constraint';
         $request = $this->putConstraintRequest($body, $flag_id, $segment_id, $constraint_id);
 
         return $this->client
@@ -1120,7 +1120,7 @@ class ConstraintApi
     /**
      * Create request for operation 'putConstraint'
      *
-     * @param  \Swagger\Client\Flagr\CreateConstraintRequest $body create a constraint (required)
+     * @param  \Swagger\Client\Model\CreateConstraintRequest $body create a constraint (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      * @param  int $constraint_id numeric ID of the constraint (required)

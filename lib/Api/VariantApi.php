@@ -89,12 +89,12 @@ class VariantApi
     /**
      * Operation createVariant
      *
-     * @param  \Swagger\Client\Flagr\CreateVariantRequest $body create a variant (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Variant
+     * @return \Swagger\Client\Model\Variant
      */
     public function createVariant($body, $flag_id)
     {
@@ -105,16 +105,16 @@ class VariantApi
     /**
      * Operation createVariantWithHttpInfo
      *
-     * @param  \Swagger\Client\Flagr\CreateVariantRequest $body create a variant (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Variant, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Variant, HTTP status code, HTTP response headers (array of strings)
      */
     public function createVariantWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Variant';
+        $returnType = '\Swagger\Client\Model\Variant';
         $request = $this->createVariantRequest($body, $flag_id);
 
         try {
@@ -166,7 +166,7 @@ class VariantApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Variant',
+                        '\Swagger\Client\Model\Variant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +174,7 @@ class VariantApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class VariantApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateVariantRequest $body create a variant (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -210,7 +210,7 @@ class VariantApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateVariantRequest $body create a variant (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -218,7 +218,7 @@ class VariantApi
      */
     public function createVariantAsyncWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Variant';
+        $returnType = '\Swagger\Client\Model\Variant';
         $request = $this->createVariantRequest($body, $flag_id);
 
         return $this->client
@@ -261,7 +261,7 @@ class VariantApi
     /**
      * Create request for operation 'createVariant'
      *
-     * @param  \Swagger\Client\Flagr\CreateVariantRequest $body create a variant (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -431,7 +431,7 @@ class VariantApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -621,7 +621,7 @@ class VariantApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Variant[]
+     * @return \Swagger\Client\Model\Variant[]
      */
     public function findVariants($flag_id)
     {
@@ -636,11 +636,11 @@ class VariantApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Variant[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Variant[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findVariantsWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Variant[]';
+        $returnType = '\Swagger\Client\Model\Variant[]';
         $request = $this->findVariantsRequest($flag_id);
 
         try {
@@ -692,7 +692,7 @@ class VariantApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Variant[]',
+                        '\Swagger\Client\Model\Variant[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -700,7 +700,7 @@ class VariantApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class VariantApi
      */
     public function findVariantsAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Variant[]';
+        $returnType = '\Swagger\Client\Model\Variant[]';
         $request = $this->findVariantsRequest($flag_id);
 
         return $this->client
@@ -883,13 +883,13 @@ class VariantApi
     /**
      * Operation putVariant
      *
-     * @param  \Swagger\Client\Flagr\PutVariantRequest $body update a variant (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Variant
+     * @return \Swagger\Client\Model\Variant
      */
     public function putVariant($body, $flag_id, $variant_id)
     {
@@ -900,17 +900,17 @@ class VariantApi
     /**
      * Operation putVariantWithHttpInfo
      *
-     * @param  \Swagger\Client\Flagr\PutVariantRequest $body update a variant (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Variant, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Variant, HTTP status code, HTTP response headers (array of strings)
      */
     public function putVariantWithHttpInfo($body, $flag_id, $variant_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Variant';
+        $returnType = '\Swagger\Client\Model\Variant';
         $request = $this->putVariantRequest($body, $flag_id, $variant_id);
 
         try {
@@ -962,7 +962,7 @@ class VariantApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Variant',
+                        '\Swagger\Client\Model\Variant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -970,7 +970,7 @@ class VariantApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -985,7 +985,7 @@ class VariantApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\PutVariantRequest $body update a variant (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $variant_id numeric ID of the variant (required)
      *
@@ -1007,7 +1007,7 @@ class VariantApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\PutVariantRequest $body update a variant (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $variant_id numeric ID of the variant (required)
      *
@@ -1016,7 +1016,7 @@ class VariantApi
      */
     public function putVariantAsyncWithHttpInfo($body, $flag_id, $variant_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Variant';
+        $returnType = '\Swagger\Client\Model\Variant';
         $request = $this->putVariantRequest($body, $flag_id, $variant_id);
 
         return $this->client
@@ -1059,7 +1059,7 @@ class VariantApi
     /**
      * Create request for operation 'putVariant'
      *
-     * @param  \Swagger\Client\Flagr\PutVariantRequest $body update a variant (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $variant_id numeric ID of the variant (required)
      *

@@ -1,6 +1,6 @@
 <?php
 /**
- * ExportApi
+ * EvaluationApi
  * PHP version 5
  *
  * @category Class
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Flagr;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * ExportApi Class Doc Comment
+ * EvaluationApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ExportApi
+class EvaluationApi
 {
     /**
      * @var ClientInterface
@@ -87,31 +87,33 @@ class ExportApi
     }
 
     /**
-     * Operation getExportEvalCacheJSON
+     * Operation postEvaluation
      *
+     * @param  \Swagger\Client\Model\EvalContext $body evalution context (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Swagger\Client\Model\EvalResult
      */
-    public function getExportEvalCacheJSON()
+    public function postEvaluation($body)
     {
-        list($response) = $this->getExportEvalCacheJSONWithHttpInfo();
+        list($response) = $this->postEvaluationWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation getExportEvalCacheJSONWithHttpInfo
+     * Operation postEvaluationWithHttpInfo
      *
+     * @param  \Swagger\Client\Model\EvalContext $body evalution context (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\EvalResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getExportEvalCacheJSONWithHttpInfo()
+    public function postEvaluationWithHttpInfo($body)
     {
-        $returnType = 'object';
-        $request = $this->getExportEvalCacheJSONRequest();
+        $returnType = '\Swagger\Client\Model\EvalResult';
+        $request = $this->postEvaluationRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -162,7 +164,7 @@ class ExportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Swagger\Client\Model\EvalResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,17 +183,18 @@ class ExportApi
     }
 
     /**
-     * Operation getExportEvalCacheJSONAsync
+     * Operation postEvaluationAsync
      *
      * 
      *
+     * @param  \Swagger\Client\Model\EvalContext $body evalution context (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportEvalCacheJSONAsync()
+    public function postEvaluationAsync($body)
     {
-        return $this->getExportEvalCacheJSONAsyncWithHttpInfo()
+        return $this->postEvaluationAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -200,18 +203,19 @@ class ExportApi
     }
 
     /**
-     * Operation getExportEvalCacheJSONAsyncWithHttpInfo
+     * Operation postEvaluationAsyncWithHttpInfo
      *
      * 
      *
+     * @param  \Swagger\Client\Model\EvalContext $body evalution context (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportEvalCacheJSONAsyncWithHttpInfo()
+    public function postEvaluationAsyncWithHttpInfo($body)
     {
-        $returnType = 'object';
-        $request = $this->getExportEvalCacheJSONRequest();
+        $returnType = '\Swagger\Client\Model\EvalResult';
+        $request = $this->postEvaluationRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,16 +255,23 @@ class ExportApi
     }
 
     /**
-     * Create request for operation 'getExportEvalCacheJSON'
+     * Create request for operation 'postEvaluation'
      *
+     * @param  \Swagger\Client\Model\EvalContext $body evalution context (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getExportEvalCacheJSONRequest()
+    protected function postEvaluationRequest($body)
     {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postEvaluation'
+            );
+        }
 
-        $resourcePath = '/export/eval_cache/json';
+        $resourcePath = '/evaluation';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -271,6 +282,9 @@ class ExportApi
 
         // body params
         $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -279,7 +293,7 @@ class ExportApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
 
@@ -326,7 +340,7 @@ class ExportApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'GET',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -334,33 +348,33 @@ class ExportApi
     }
 
     /**
-     * Operation getExportSqlite
+     * Operation postEvaluationBatch
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\EvaluationBatchRequest $body evalution batch request (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string
+     * @return \Swagger\Client\Model\EvaluationBatchResponse
      */
-    public function getExportSqlite($exclude_snapshots = null)
+    public function postEvaluationBatch($body)
     {
-        list($response) = $this->getExportSqliteWithHttpInfo($exclude_snapshots);
+        list($response) = $this->postEvaluationBatchWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation getExportSqliteWithHttpInfo
+     * Operation postEvaluationBatchWithHttpInfo
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\EvaluationBatchRequest $body evalution batch request (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\EvaluationBatchResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getExportSqliteWithHttpInfo($exclude_snapshots = null)
+    public function postEvaluationBatchWithHttpInfo($body)
     {
-        $returnType = 'string';
-        $request = $this->getExportSqliteRequest($exclude_snapshots);
+        $returnType = '\Swagger\Client\Model\EvaluationBatchResponse';
+        $request = $this->postEvaluationBatchRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -411,7 +425,7 @@ class ExportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'string',
+                        '\Swagger\Client\Model\EvaluationBatchResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -430,18 +444,18 @@ class ExportApi
     }
 
     /**
-     * Operation getExportSqliteAsync
+     * Operation postEvaluationBatchAsync
      *
      * 
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\EvaluationBatchRequest $body evalution batch request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportSqliteAsync($exclude_snapshots = null)
+    public function postEvaluationBatchAsync($body)
     {
-        return $this->getExportSqliteAsyncWithHttpInfo($exclude_snapshots)
+        return $this->postEvaluationBatchAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -450,19 +464,19 @@ class ExportApi
     }
 
     /**
-     * Operation getExportSqliteAsyncWithHttpInfo
+     * Operation postEvaluationBatchAsyncWithHttpInfo
      *
      * 
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\EvaluationBatchRequest $body evalution batch request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportSqliteAsyncWithHttpInfo($exclude_snapshots = null)
+    public function postEvaluationBatchAsyncWithHttpInfo($body)
     {
-        $returnType = 'string';
-        $request = $this->getExportSqliteRequest($exclude_snapshots);
+        $returnType = '\Swagger\Client\Model\EvaluationBatchResponse';
+        $request = $this->postEvaluationBatchRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -502,40 +516,45 @@ class ExportApi
     }
 
     /**
-     * Create request for operation 'getExportSqlite'
+     * Create request for operation 'postEvaluationBatch'
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\EvaluationBatchRequest $body evalution batch request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getExportSqliteRequest($exclude_snapshots = null)
+    protected function postEvaluationBatchRequest($body)
     {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postEvaluationBatch'
+            );
+        }
 
-        $resourcePath = '/export/sqlite';
+        $resourcePath = '/evaluation/batch';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($exclude_snapshots !== null) {
-            $queryParams['exclude_snapshots'] = ObjectSerializer::toQueryValue($exclude_snapshots, null);
-        }
 
 
         // body params
         $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/octet-stream']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/octet-stream'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -582,7 +601,7 @@ class ExportApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'GET',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

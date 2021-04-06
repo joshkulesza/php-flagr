@@ -1,6 +1,6 @@
 <?php
 /**
- * SegmentApi
+ * VariantApi
  * PHP version 5
  *
  * @category Class
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Flagr;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * SegmentApi Class Doc Comment
+ * VariantApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SegmentApi
+class VariantApi
 {
     /**
      * @var ClientInterface
@@ -87,35 +87,35 @@ class SegmentApi
     }
 
     /**
-     * Operation createSegment
+     * Operation createVariant
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Segment
+     * @return \Swagger\Client\Model\Variant
      */
-    public function createSegment($body, $flag_id)
+    public function createVariant($body, $flag_id)
     {
-        list($response) = $this->createSegmentWithHttpInfo($body, $flag_id);
+        list($response) = $this->createVariantWithHttpInfo($body, $flag_id);
         return $response;
     }
 
     /**
-     * Operation createSegmentWithHttpInfo
+     * Operation createVariantWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Segment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Variant, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createSegmentWithHttpInfo($body, $flag_id)
+    public function createVariantWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
-        $request = $this->createSegmentRequest($body, $flag_id);
+        $returnType = '\Swagger\Client\Model\Variant';
+        $request = $this->createVariantRequest($body, $flag_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -166,7 +166,7 @@ class SegmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Segment',
+                        '\Swagger\Client\Model\Variant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,19 +185,19 @@ class SegmentApi
     }
 
     /**
-     * Operation createSegmentAsync
+     * Operation createVariantAsync
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createSegmentAsync($body, $flag_id)
+    public function createVariantAsync($body, $flag_id)
     {
-        return $this->createSegmentAsyncWithHttpInfo($body, $flag_id)
+        return $this->createVariantAsyncWithHttpInfo($body, $flag_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -206,20 +206,20 @@ class SegmentApi
     }
 
     /**
-     * Operation createSegmentAsyncWithHttpInfo
+     * Operation createVariantAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createSegmentAsyncWithHttpInfo($body, $flag_id)
+    public function createVariantAsyncWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
-        $request = $this->createSegmentRequest($body, $flag_id);
+        $returnType = '\Swagger\Client\Model\Variant';
+        $request = $this->createVariantRequest($body, $flag_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -259,30 +259,30 @@ class SegmentApi
     }
 
     /**
-     * Create request for operation 'createSegment'
+     * Create request for operation 'createVariant'
      *
-     * @param  \Swagger\Client\Model\CreateSegmentRequest $body create a segment under a flag (required)
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  \Swagger\Client\Model\CreateVariantRequest $body create a variant (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createSegmentRequest($body, $flag_id)
+    protected function createVariantRequest($body, $flag_id)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling createSegment'
+                'Missing the required parameter $body when calling createVariant'
             );
         }
         // verify the required parameter 'flag_id' is set
         if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flag_id when calling createSegment'
+                'Missing the required parameter $flag_id when calling createVariant'
             );
         }
 
-        $resourcePath = '/flags/{flagID}/segments';
+        $resourcePath = '/flags/{flagID}/variants';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -367,34 +367,34 @@ class SegmentApi
     }
 
     /**
-     * Operation deleteSegment
+     * Operation deleteVariant
      *
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function deleteSegment($flag_id, $segment_id)
+    public function deleteVariant($flag_id, $variant_id)
     {
-        $this->deleteSegmentWithHttpInfo($flag_id, $segment_id);
+        $this->deleteVariantWithHttpInfo($flag_id, $variant_id);
     }
 
     /**
-     * Operation deleteSegmentWithHttpInfo
+     * Operation deleteVariantWithHttpInfo
      *
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteSegmentWithHttpInfo($flag_id, $segment_id)
+    public function deleteVariantWithHttpInfo($flag_id, $variant_id)
     {
         $returnType = '';
-        $request = $this->deleteSegmentRequest($flag_id, $segment_id);
+        $request = $this->deleteVariantRequest($flag_id, $variant_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -442,19 +442,19 @@ class SegmentApi
     }
 
     /**
-     * Operation deleteSegmentAsync
+     * Operation deleteVariantAsync
      *
      * 
      *
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteSegmentAsync($flag_id, $segment_id)
+    public function deleteVariantAsync($flag_id, $variant_id)
     {
-        return $this->deleteSegmentAsyncWithHttpInfo($flag_id, $segment_id)
+        return $this->deleteVariantAsyncWithHttpInfo($flag_id, $variant_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -463,20 +463,20 @@ class SegmentApi
     }
 
     /**
-     * Operation deleteSegmentAsyncWithHttpInfo
+     * Operation deleteVariantAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteSegmentAsyncWithHttpInfo($flag_id, $segment_id)
+    public function deleteVariantAsyncWithHttpInfo($flag_id, $variant_id)
     {
         $returnType = '';
-        $request = $this->deleteSegmentRequest($flag_id, $segment_id);
+        $request = $this->deleteVariantRequest($flag_id, $variant_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -502,30 +502,30 @@ class SegmentApi
     }
 
     /**
-     * Create request for operation 'deleteSegment'
+     * Create request for operation 'deleteVariant'
      *
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteSegmentRequest($flag_id, $segment_id)
+    protected function deleteVariantRequest($flag_id, $variant_id)
     {
         // verify the required parameter 'flag_id' is set
         if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flag_id when calling deleteSegment'
+                'Missing the required parameter $flag_id when calling deleteVariant'
             );
         }
-        // verify the required parameter 'segment_id' is set
-        if ($segment_id === null || (is_array($segment_id) && count($segment_id) === 0)) {
+        // verify the required parameter 'variant_id' is set
+        if ($variant_id === null || (is_array($variant_id) && count($variant_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $segment_id when calling deleteSegment'
+                'Missing the required parameter $variant_id when calling deleteVariant'
             );
         }
 
-        $resourcePath = '/flags/{flagID}/segments/{segmentID}';
+        $resourcePath = '/flags/{flagID}/variants/{variantID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -542,10 +542,10 @@ class SegmentApi
             );
         }
         // path params
-        if ($segment_id !== null) {
+        if ($variant_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'segmentID' . '}',
-                ObjectSerializer::toPathValue($segment_id),
+                '{' . 'variantID' . '}',
+                ObjectSerializer::toPathValue($variant_id),
                 $resourcePath
             );
         }
@@ -615,33 +615,33 @@ class SegmentApi
     }
 
     /**
-     * Operation findSegments
+     * Operation findVariants
      *
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Segment[]
+     * @return \Swagger\Client\Model\Variant[]
      */
-    public function findSegments($flag_id)
+    public function findVariants($flag_id)
     {
-        list($response) = $this->findSegmentsWithHttpInfo($flag_id);
+        list($response) = $this->findVariantsWithHttpInfo($flag_id);
         return $response;
     }
 
     /**
-     * Operation findSegmentsWithHttpInfo
+     * Operation findVariantsWithHttpInfo
      *
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Segment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Variant[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function findSegmentsWithHttpInfo($flag_id)
+    public function findVariantsWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment[]';
-        $request = $this->findSegmentsRequest($flag_id);
+        $returnType = '\Swagger\Client\Model\Variant[]';
+        $request = $this->findVariantsRequest($flag_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -692,7 +692,7 @@ class SegmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Segment[]',
+                        '\Swagger\Client\Model\Variant[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -711,18 +711,18 @@ class SegmentApi
     }
 
     /**
-     * Operation findSegmentsAsync
+     * Operation findVariantsAsync
      *
      * 
      *
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findSegmentsAsync($flag_id)
+    public function findVariantsAsync($flag_id)
     {
-        return $this->findSegmentsAsyncWithHttpInfo($flag_id)
+        return $this->findVariantsAsyncWithHttpInfo($flag_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -731,19 +731,19 @@ class SegmentApi
     }
 
     /**
-     * Operation findSegmentsAsyncWithHttpInfo
+     * Operation findVariantsAsyncWithHttpInfo
      *
      * 
      *
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findSegmentsAsyncWithHttpInfo($flag_id)
+    public function findVariantsAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment[]';
-        $request = $this->findSegmentsRequest($flag_id);
+        $returnType = '\Swagger\Client\Model\Variant[]';
+        $request = $this->findVariantsRequest($flag_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -783,23 +783,23 @@ class SegmentApi
     }
 
     /**
-     * Create request for operation 'findSegments'
+     * Create request for operation 'findVariants'
      *
-     * @param  int $flag_id numeric ID of the flag to get (required)
+     * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function findSegmentsRequest($flag_id)
+    protected function findVariantsRequest($flag_id)
     {
         // verify the required parameter 'flag_id' is set
         if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flag_id when calling findSegments'
+                'Missing the required parameter $flag_id when calling findVariants'
             );
         }
 
-        $resourcePath = '/flags/{flagID}/segments';
+        $resourcePath = '/flags/{flagID}/variants';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -881,37 +881,37 @@ class SegmentApi
     }
 
     /**
-     * Operation putSegment
+     * Operation putVariant
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Segment
+     * @return \Swagger\Client\Model\Variant
      */
-    public function putSegment($body, $flag_id, $segment_id)
+    public function putVariant($body, $flag_id, $variant_id)
     {
-        list($response) = $this->putSegmentWithHttpInfo($body, $flag_id, $segment_id);
+        list($response) = $this->putVariantWithHttpInfo($body, $flag_id, $variant_id);
         return $response;
     }
 
     /**
-     * Operation putSegmentWithHttpInfo
+     * Operation putVariantWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Segment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Variant, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putSegmentWithHttpInfo($body, $flag_id, $segment_id)
+    public function putVariantWithHttpInfo($body, $flag_id, $variant_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
-        $request = $this->putSegmentRequest($body, $flag_id, $segment_id);
+        $returnType = '\Swagger\Client\Model\Variant';
+        $request = $this->putVariantRequest($body, $flag_id, $variant_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -962,7 +962,7 @@ class SegmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Segment',
+                        '\Swagger\Client\Model\Variant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -981,20 +981,20 @@ class SegmentApi
     }
 
     /**
-     * Operation putSegmentAsync
+     * Operation putVariantAsync
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putSegmentAsync($body, $flag_id, $segment_id)
+    public function putVariantAsync($body, $flag_id, $variant_id)
     {
-        return $this->putSegmentAsyncWithHttpInfo($body, $flag_id, $segment_id)
+        return $this->putVariantAsyncWithHttpInfo($body, $flag_id, $variant_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1003,21 +1003,21 @@ class SegmentApi
     }
 
     /**
-     * Operation putSegmentAsyncWithHttpInfo
+     * Operation putVariantAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putSegmentAsyncWithHttpInfo($body, $flag_id, $segment_id)
+    public function putVariantAsyncWithHttpInfo($body, $flag_id, $variant_id)
     {
-        $returnType = '\Swagger\Client\Model\Segment';
-        $request = $this->putSegmentRequest($body, $flag_id, $segment_id);
+        $returnType = '\Swagger\Client\Model\Variant';
+        $request = $this->putVariantRequest($body, $flag_id, $variant_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1057,37 +1057,37 @@ class SegmentApi
     }
 
     /**
-     * Create request for operation 'putSegment'
+     * Create request for operation 'putVariant'
      *
-     * @param  \Swagger\Client\Model\PutSegmentRequest $body update a segment (required)
+     * @param  \Swagger\Client\Model\PutVariantRequest $body update a variant (required)
      * @param  int $flag_id numeric ID of the flag (required)
-     * @param  int $segment_id numeric ID of the segment (required)
+     * @param  int $variant_id numeric ID of the variant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function putSegmentRequest($body, $flag_id, $segment_id)
+    protected function putVariantRequest($body, $flag_id, $variant_id)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling putSegment'
+                'Missing the required parameter $body when calling putVariant'
             );
         }
         // verify the required parameter 'flag_id' is set
         if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flag_id when calling putSegment'
+                'Missing the required parameter $flag_id when calling putVariant'
             );
         }
-        // verify the required parameter 'segment_id' is set
-        if ($segment_id === null || (is_array($segment_id) && count($segment_id) === 0)) {
+        // verify the required parameter 'variant_id' is set
+        if ($variant_id === null || (is_array($variant_id) && count($variant_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $segment_id when calling putSegment'
+                'Missing the required parameter $variant_id when calling putVariant'
             );
         }
 
-        $resourcePath = '/flags/{flagID}/segments/{segmentID}';
+        $resourcePath = '/flags/{flagID}/variants/{variantID}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1104,253 +1104,10 @@ class SegmentApi
             );
         }
         // path params
-        if ($segment_id !== null) {
+        if ($variant_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'segmentID' . '}',
-                ObjectSerializer::toPathValue($segment_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'PUT',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation putSegmentsReorder
-     *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
-     * @param  int $flag_id numeric ID of the flag (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function putSegmentsReorder($body, $flag_id)
-    {
-        $this->putSegmentsReorderWithHttpInfo($body, $flag_id);
-    }
-
-    /**
-     * Operation putSegmentsReorderWithHttpInfo
-     *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
-     * @param  int $flag_id numeric ID of the flag (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function putSegmentsReorderWithHttpInfo($body, $flag_id)
-    {
-        $returnType = '';
-        $request = $this->putSegmentsReorderRequest($body, $flag_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 0:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\Error',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation putSegmentsReorderAsync
-     *
-     * 
-     *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
-     * @param  int $flag_id numeric ID of the flag (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function putSegmentsReorderAsync($body, $flag_id)
-    {
-        return $this->putSegmentsReorderAsyncWithHttpInfo($body, $flag_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation putSegmentsReorderAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
-     * @param  int $flag_id numeric ID of the flag (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function putSegmentsReorderAsyncWithHttpInfo($body, $flag_id)
-    {
-        $returnType = '';
-        $request = $this->putSegmentsReorderRequest($body, $flag_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'putSegmentsReorder'
-     *
-     * @param  \Swagger\Client\Model\PutSegmentReorderRequest $body reorder segments (required)
-     * @param  int $flag_id numeric ID of the flag (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function putSegmentsReorderRequest($body, $flag_id)
-    {
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling putSegmentsReorder'
-            );
-        }
-        // verify the required parameter 'flag_id' is set
-        if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $flag_id when calling putSegmentsReorder'
-            );
-        }
-
-        $resourcePath = '/flags/{flagID}/segments/reorder';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($flag_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'flagID' . '}',
-                ObjectSerializer::toPathValue($flag_id),
+                '{' . 'variantID' . '}',
+                ObjectSerializer::toPathValue($variant_id),
                 $resourcePath
             );
         }

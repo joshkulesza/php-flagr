@@ -89,12 +89,12 @@ class TagApi
     /**
      * Operation createTag
      *
-     * @param  \Swagger\Client\Flagr\CreateTagRequest $body create a tag (required)
+     * @param  \Swagger\Client\Model\CreateTagRequest $body create a tag (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Tag
+     * @return \Swagger\Client\Model\Tag
      */
     public function createTag($body, $flag_id)
     {
@@ -105,16 +105,16 @@ class TagApi
     /**
      * Operation createTagWithHttpInfo
      *
-     * @param  \Swagger\Client\Flagr\CreateTagRequest $body create a tag (required)
+     * @param  \Swagger\Client\Model\CreateTagRequest $body create a tag (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Tag, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Tag, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Tag';
+        $returnType = '\Swagger\Client\Model\Tag';
         $request = $this->createTagRequest($body, $flag_id);
 
         try {
@@ -166,7 +166,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Tag',
+                        '\Swagger\Client\Model\Tag',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +174,7 @@ class TagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class TagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateTagRequest $body create a tag (required)
+     * @param  \Swagger\Client\Model\CreateTagRequest $body create a tag (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -210,7 +210,7 @@ class TagApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\CreateTagRequest $body create a tag (required)
+     * @param  \Swagger\Client\Model\CreateTagRequest $body create a tag (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -218,7 +218,7 @@ class TagApi
      */
     public function createTagAsyncWithHttpInfo($body, $flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Tag';
+        $returnType = '\Swagger\Client\Model\Tag';
         $request = $this->createTagRequest($body, $flag_id);
 
         return $this->client
@@ -261,7 +261,7 @@ class TagApi
     /**
      * Create request for operation 'createTag'
      *
-     * @param  \Swagger\Client\Flagr\CreateTagRequest $body create a tag (required)
+     * @param  \Swagger\Client\Model\CreateTagRequest $body create a tag (required)
      * @param  int $flag_id numeric ID of the flag (required)
      *
      * @throws \InvalidArgumentException
@@ -431,7 +431,7 @@ class TagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -623,7 +623,7 @@ class TagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Tag[]
+     * @return \Swagger\Client\Model\Tag[]
      */
     public function findAllTags($limit = null, $offset = null, $value_like = null)
     {
@@ -640,11 +640,11 @@ class TagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Tag[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findAllTagsWithHttpInfo($limit = null, $offset = null, $value_like = null)
     {
-        $returnType = '\Swagger\Client\Flagr\Tag[]';
+        $returnType = '\Swagger\Client\Model\Tag[]';
         $request = $this->findAllTagsRequest($limit, $offset, $value_like);
 
         try {
@@ -696,7 +696,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Tag[]',
+                        '\Swagger\Client\Model\Tag[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -704,7 +704,7 @@ class TagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -750,7 +750,7 @@ class TagApi
      */
     public function findAllTagsAsyncWithHttpInfo($limit = null, $offset = null, $value_like = null)
     {
-        $returnType = '\Swagger\Client\Flagr\Tag[]';
+        $returnType = '\Swagger\Client\Model\Tag[]';
         $request = $this->findAllTagsRequest($limit, $offset, $value_like);
 
         return $this->client
@@ -895,7 +895,7 @@ class TagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Tag[]
+     * @return \Swagger\Client\Model\Tag[]
      */
     public function findTags($flag_id)
     {
@@ -910,11 +910,11 @@ class TagApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Tag[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Tag[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findTagsWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Tag[]';
+        $returnType = '\Swagger\Client\Model\Tag[]';
         $request = $this->findTagsRequest($flag_id);
 
         try {
@@ -966,7 +966,7 @@ class TagApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Tag[]',
+                        '\Swagger\Client\Model\Tag[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -974,7 +974,7 @@ class TagApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1016,7 +1016,7 @@ class TagApi
      */
     public function findTagsAsyncWithHttpInfo($flag_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Tag[]';
+        $returnType = '\Swagger\Client\Model\Tag[]';
         $request = $this->findTagsRequest($flag_id);
 
         return $this->client

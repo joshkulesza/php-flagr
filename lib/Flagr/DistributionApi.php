@@ -1,6 +1,6 @@
 <?php
 /**
- * ExportApi
+ * DistributionApi
  * PHP version 5
  *
  * @category Class
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Flagr;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * ExportApi Class Doc Comment
+ * DistributionApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ExportApi
+class DistributionApi
 {
     /**
      * @var ClientInterface
@@ -87,31 +87,35 @@ class ExportApi
     }
 
     /**
-     * Operation getExportEvalCacheJSON
+     * Operation findDistributions
      *
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Swagger\Client\Model\Distribution[]
      */
-    public function getExportEvalCacheJSON()
+    public function findDistributions($flag_id, $segment_id)
     {
-        list($response) = $this->getExportEvalCacheJSONWithHttpInfo();
+        list($response) = $this->findDistributionsWithHttpInfo($flag_id, $segment_id);
         return $response;
     }
 
     /**
-     * Operation getExportEvalCacheJSONWithHttpInfo
+     * Operation findDistributionsWithHttpInfo
      *
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Distribution[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getExportEvalCacheJSONWithHttpInfo()
+    public function findDistributionsWithHttpInfo($flag_id, $segment_id)
     {
-        $returnType = 'object';
-        $request = $this->getExportEvalCacheJSONRequest();
+        $returnType = '\Swagger\Client\Model\Distribution[]';
+        $request = $this->findDistributionsRequest($flag_id, $segment_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -162,7 +166,7 @@ class ExportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Swagger\Client\Model\Distribution[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,17 +185,19 @@ class ExportApi
     }
 
     /**
-     * Operation getExportEvalCacheJSONAsync
+     * Operation findDistributionsAsync
      *
      * 
      *
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportEvalCacheJSONAsync()
+    public function findDistributionsAsync($flag_id, $segment_id)
     {
-        return $this->getExportEvalCacheJSONAsyncWithHttpInfo()
+        return $this->findDistributionsAsyncWithHttpInfo($flag_id, $segment_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -200,18 +206,20 @@ class ExportApi
     }
 
     /**
-     * Operation getExportEvalCacheJSONAsyncWithHttpInfo
+     * Operation findDistributionsAsyncWithHttpInfo
      *
      * 
      *
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportEvalCacheJSONAsyncWithHttpInfo()
+    public function findDistributionsAsyncWithHttpInfo($flag_id, $segment_id)
     {
-        $returnType = 'object';
-        $request = $this->getExportEvalCacheJSONRequest();
+        $returnType = '\Swagger\Client\Model\Distribution[]';
+        $request = $this->findDistributionsRequest($flag_id, $segment_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,16 +259,30 @@ class ExportApi
     }
 
     /**
-     * Create request for operation 'getExportEvalCacheJSON'
+     * Create request for operation 'findDistributions'
      *
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getExportEvalCacheJSONRequest()
+    protected function findDistributionsRequest($flag_id, $segment_id)
     {
+        // verify the required parameter 'flag_id' is set
+        if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $flag_id when calling findDistributions'
+            );
+        }
+        // verify the required parameter 'segment_id' is set
+        if ($segment_id === null || (is_array($segment_id) && count($segment_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $segment_id when calling findDistributions'
+            );
+        }
 
-        $resourcePath = '/export/eval_cache/json';
+        $resourcePath = '/flags/{flagID}/segments/{segmentID}/distributions';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -268,6 +290,22 @@ class ExportApi
         $multipart = false;
 
 
+        // path params
+        if ($flag_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'flagID' . '}',
+                ObjectSerializer::toPathValue($flag_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($segment_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'segmentID' . '}',
+                ObjectSerializer::toPathValue($segment_id),
+                $resourcePath
+            );
+        }
 
         // body params
         $_tempBody = null;
@@ -334,33 +372,37 @@ class ExportApi
     }
 
     /**
-     * Operation getExportSqlite
+     * Operation putDistributions
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string
+     * @return \Swagger\Client\Model\Distribution[]
      */
-    public function getExportSqlite($exclude_snapshots = null)
+    public function putDistributions($body, $flag_id, $segment_id)
     {
-        list($response) = $this->getExportSqliteWithHttpInfo($exclude_snapshots);
+        list($response) = $this->putDistributionsWithHttpInfo($body, $flag_id, $segment_id);
         return $response;
     }
 
     /**
-     * Operation getExportSqliteWithHttpInfo
+     * Operation putDistributionsWithHttpInfo
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Distribution[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getExportSqliteWithHttpInfo($exclude_snapshots = null)
+    public function putDistributionsWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = 'string';
-        $request = $this->getExportSqliteRequest($exclude_snapshots);
+        $returnType = '\Swagger\Client\Model\Distribution[]';
+        $request = $this->putDistributionsRequest($body, $flag_id, $segment_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -411,7 +453,7 @@ class ExportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'string',
+                        '\Swagger\Client\Model\Distribution[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -430,18 +472,20 @@ class ExportApi
     }
 
     /**
-     * Operation getExportSqliteAsync
+     * Operation putDistributionsAsync
      *
      * 
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportSqliteAsync($exclude_snapshots = null)
+    public function putDistributionsAsync($body, $flag_id, $segment_id)
     {
-        return $this->getExportSqliteAsyncWithHttpInfo($exclude_snapshots)
+        return $this->putDistributionsAsyncWithHttpInfo($body, $flag_id, $segment_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -450,19 +494,21 @@ class ExportApi
     }
 
     /**
-     * Operation getExportSqliteAsyncWithHttpInfo
+     * Operation putDistributionsAsyncWithHttpInfo
      *
      * 
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExportSqliteAsyncWithHttpInfo($exclude_snapshots = null)
+    public function putDistributionsAsyncWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = 'string';
-        $request = $this->getExportSqliteRequest($exclude_snapshots);
+        $returnType = '\Swagger\Client\Model\Distribution[]';
+        $request = $this->putDistributionsRequest($body, $flag_id, $segment_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -502,40 +548,75 @@ class ExportApi
     }
 
     /**
-     * Create request for operation 'getExportSqlite'
+     * Create request for operation 'putDistributions'
      *
-     * @param  bool $exclude_snapshots export without snapshots data - useful for smaller db without snapshots (optional)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
+     * @param  int $flag_id numeric ID of the flag (required)
+     * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getExportSqliteRequest($exclude_snapshots = null)
+    protected function putDistributionsRequest($body, $flag_id, $segment_id)
     {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling putDistributions'
+            );
+        }
+        // verify the required parameter 'flag_id' is set
+        if ($flag_id === null || (is_array($flag_id) && count($flag_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $flag_id when calling putDistributions'
+            );
+        }
+        // verify the required parameter 'segment_id' is set
+        if ($segment_id === null || (is_array($segment_id) && count($segment_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $segment_id when calling putDistributions'
+            );
+        }
 
-        $resourcePath = '/export/sqlite';
+        $resourcePath = '/flags/{flagID}/segments/{segmentID}/distributions';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($exclude_snapshots !== null) {
-            $queryParams['exclude_snapshots'] = ObjectSerializer::toQueryValue($exclude_snapshots, null);
-        }
 
+        // path params
+        if ($flag_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'flagID' . '}',
+                ObjectSerializer::toPathValue($flag_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($segment_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'segmentID' . '}',
+                ObjectSerializer::toPathValue($segment_id),
+                $resourcePath
+            );
+        }
 
         // body params
         $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/octet-stream']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/octet-stream'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -582,7 +663,7 @@ class ExportApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'GET',
+            'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

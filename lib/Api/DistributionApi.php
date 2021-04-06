@@ -94,7 +94,7 @@ class DistributionApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Distribution[]
+     * @return \Swagger\Client\Model\Distribution[]
      */
     public function findDistributions($flag_id, $segment_id)
     {
@@ -110,11 +110,11 @@ class DistributionApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Distribution[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Distribution[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findDistributionsWithHttpInfo($flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Distribution[]';
+        $returnType = '\Swagger\Client\Model\Distribution[]';
         $request = $this->findDistributionsRequest($flag_id, $segment_id);
 
         try {
@@ -166,7 +166,7 @@ class DistributionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Distribution[]',
+                        '\Swagger\Client\Model\Distribution[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -174,7 +174,7 @@ class DistributionApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class DistributionApi
      */
     public function findDistributionsAsyncWithHttpInfo($flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Distribution[]';
+        $returnType = '\Swagger\Client\Model\Distribution[]';
         $request = $this->findDistributionsRequest($flag_id, $segment_id);
 
         return $this->client
@@ -374,13 +374,13 @@ class DistributionApi
     /**
      * Operation putDistributions
      *
-     * @param  \Swagger\Client\Flagr\PutDistributionsRequest $body array of distributions (required)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Flagr\Distribution[]
+     * @return \Swagger\Client\Model\Distribution[]
      */
     public function putDistributions($body, $flag_id, $segment_id)
     {
@@ -391,17 +391,17 @@ class DistributionApi
     /**
      * Operation putDistributionsWithHttpInfo
      *
-     * @param  \Swagger\Client\Flagr\PutDistributionsRequest $body array of distributions (required)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Flagr\Distribution[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Distribution[], HTTP status code, HTTP response headers (array of strings)
      */
     public function putDistributionsWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Distribution[]';
+        $returnType = '\Swagger\Client\Model\Distribution[]';
         $request = $this->putDistributionsRequest($body, $flag_id, $segment_id);
 
         try {
@@ -453,7 +453,7 @@ class DistributionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Distribution[]',
+                        '\Swagger\Client\Model\Distribution[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -461,7 +461,7 @@ class DistributionApi
                 case 0:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Flagr\Error',
+                        '\Swagger\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -476,7 +476,7 @@ class DistributionApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\PutDistributionsRequest $body array of distributions (required)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -498,7 +498,7 @@ class DistributionApi
      *
      * 
      *
-     * @param  \Swagger\Client\Flagr\PutDistributionsRequest $body array of distributions (required)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
@@ -507,7 +507,7 @@ class DistributionApi
      */
     public function putDistributionsAsyncWithHttpInfo($body, $flag_id, $segment_id)
     {
-        $returnType = '\Swagger\Client\Flagr\Distribution[]';
+        $returnType = '\Swagger\Client\Model\Distribution[]';
         $request = $this->putDistributionsRequest($body, $flag_id, $segment_id);
 
         return $this->client
@@ -550,7 +550,7 @@ class DistributionApi
     /**
      * Create request for operation 'putDistributions'
      *
-     * @param  \Swagger\Client\Flagr\PutDistributionsRequest $body array of distributions (required)
+     * @param  \Swagger\Client\Model\PutDistributionsRequest $body array of distributions (required)
      * @param  int $flag_id numeric ID of the flag (required)
      * @param  int $segment_id numeric ID of the segment (required)
      *
