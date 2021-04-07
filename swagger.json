@@ -1,0 +1,6 @@
+{
+    "packagePath": "php-flagr",
+    "invokerPackage": "Flagr\\Client",
+    "composerVendorName": "joshkulesza",
+    "composerProjectName": "php-flagr"
+}
